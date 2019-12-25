@@ -1,0 +1,24 @@
+{
+  "type" : "miner",
+  "version" : "0.1",
+  "name" : "IMDB Miner",
+  "args" : {
+    "age" : 60
+  },
+  "inputDS" : {
+    "type": "",
+    "ip" : "",
+    "port" : "",
+    "database" : "",
+    "username" : "",
+    "password" : ""
+  },
+  "outputDS" : {
+    "type": "MongoDB",
+    "ip" : "e5a0d72e8381",
+    "port" : 27017,
+    "database" : "imdb",
+    "username" : "",
+    "password" : ""
+  }
+}
