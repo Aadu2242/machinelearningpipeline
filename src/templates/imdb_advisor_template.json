@@ -17,7 +17,7 @@
     "type": "ArangoDB",
     "ip" : "localhost",
     "port" : 8259,
-    "database" : "imdb",
+    "database" : "titanic",
     "username" : "root",
     "password" : "root"
   }

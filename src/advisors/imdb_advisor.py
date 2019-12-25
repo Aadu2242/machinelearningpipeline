@@ -95,13 +95,8 @@ X_te = pad_sequences(list_tokenized_test, maxlen=maxlen)
 prediction = model.predict(X_te)
 y_pred = (prediction > 0.5)
 
-print (prediction)
 
-print("Hello")
-
-print(y_test)
-
-arango_host = 'http://' + arguments['outputDS']["ip"] + ':' + arguments['outputDS']["ip"]
+arango_host = 'http://' + arguments['outputDS']["ip"] + ':' + arguments['outputDS']["port"]
 
 client = ArangoClient(hosts=arango_host)
 
@@ -127,5 +122,4 @@ students.insert_many(prediction_data_to_upload)
 
 from sklearn.metrics import f1_score, confusion_matrix
 print('F1-score: {0}'.format(f1_score(y_pred, y_test)))
-print('Confusion matrix:')
 confusion_matrix(y_pred, y_test)

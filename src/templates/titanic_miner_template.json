@@ -1,9 +1,9 @@
 {
   "type" : "miner",
   "version" : "0.1",
-  "name" : "IMDB Miner",
+  "name" : "Titanic Miner",
   "args" : {
-    "age" : 60
+
   },
   "inputDS" : {
     "type": "",
