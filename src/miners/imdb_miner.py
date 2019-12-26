@@ -9,9 +9,6 @@ with open('/Users/adesh/PycharmProjects/machinelearningpipeline/src/templates/im
 
 df2 = pd.read_csv('/Users/adesh/PycharmProjects/machinelearningpipeline/src/data/imdb_master.csv',encoding="latin-1")
 
-df = df2[df2.label != 'unsup']
-df.to_csv('imdb_master.csv')
-
 con = MongoClient(arguments['outputDS']["ip"], arguments['outputDS']["port"])
 mongo_db = con['imdb']
 
