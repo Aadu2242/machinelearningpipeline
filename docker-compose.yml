@@ -1,0 +1,31 @@
+version: '3.2'
+
+services:
+  ml_base:
+    build:
+      context: src/ml_base/
+    networks:
+      - ml_pipeline
+    container_name: ml_base
+
+  mongodb:
+    build:
+      context: src/mongodb/
+    ports:
+      - "27017:27017"
+    networks:
+      - ml_pipeline
+    container_name: mongodb
+
+  arangodb:
+    build:
+      context: src/arangodb/
+    ports:
+      - "8529:8529"
+    networks:
+      - ml_pipeline
+    container_name: arangodb
+
+networks:
+  ml_pipeline:
+    driver: bridge

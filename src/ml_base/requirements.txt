@@ -4,4 +4,3 @@ keras
 sklearn
 pymongo
 python-arango
-tensorflow
