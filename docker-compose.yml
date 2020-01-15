@@ -23,7 +23,7 @@ services:
     ports:
       - "8529:8529"
     environment:
-      - ARANGO_ROOT_PASSWORD=password
+      - ARANGO_ROOT_PASSWORD=test
     networks:
       - ml_pipeline
     container_name: arangodb
