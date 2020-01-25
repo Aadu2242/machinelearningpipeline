@@ -23,7 +23,7 @@ dag = DAG('Tianic_Data_Advisor', default_args=default_args, schedule_interval=ti
 # t1, t2 and t3 are examples of tasks created by instantiating operators
 t1 = BashOperator(
     task_id='Tianic_Data_Advisor',
-    bash_command='docker run -it --link e5a0d72e8381:27017 --link b7398774a8ba:8529 ml_base python src/advisor/titanic_advisor.py',
+    bash_command='docker run -it machinelearningpipeline_ml_base python ml/advisor/titanic_advisor.py',
     dag=dag)
 
 t1
